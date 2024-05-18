@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: url('https://img.freepik.com/premium-photo/laptop-computer-houseplant-books-blue-background-with-copy-space-flat-lay_35674-9668.jpg') center center fixed;
+      background-size: cover;
+    }
+
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-top: 8px;
+    }
+
+    .forgot-password {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .google-login {
+      background-color: #dd4b39;
+      color: #fff;
+    }
+
+    .google-login:hover {
+      background-color: #c23321;
+    }
+  </style>
+  
+    
+</head>
+<body>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 login-container">
+        <h2 class="text-center">Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Email:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+
+          <button type="button" class="btn btn-success btn-block" onclick="login()">Login</button>
+
+          <div class="forgot-password">
+            <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+          </div>
+
+          <button type="button" class="btn btn-danger btn-block google-login" onclick="loginWithGoogle()">Login with Google</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "user" && password === "password") {
+        alert('Login successful!');
+      } else {
+        alert('Invalid username or password.');
+      }
+    }
+
+    function forgotPassword() {
+      alert('Forgot Password?');
+    }
+
+    function loginWithGoogle() {
+      alert('Login with Google clicked!');
+    }
+  </script>
+<script>
+  function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "123" && password === "123") {
+
+      // Redirect to the dashboard page upon successful login
+      window.location.href = "course.html";
+    } else {
+      alert('Invalid username or password.');
+    }
+  }
+
+  function forgotPassword() {
+    alert('Forgot Password?');
+  }
+
+  function loginWithGoogle() {
+    alert('Login with Google clicked!');
+  }
+</script> 
+
+
+</body>
+
+</html>
